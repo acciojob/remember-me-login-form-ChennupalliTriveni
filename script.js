@@ -11,14 +11,16 @@ const savedUsername = localStorage.getItem("username");
 const savedPassword = localStorage.getItem("password");
 
 if (savedUsername && savedPassword) {
-  existingBtn.style.display = "block";   // show button if credentials exist
+  existingBtn.style.display = "block"; 
+} else {
+  existingBtn.style.display = "none";
 }
 
 // -----------------------------------
 // Form Submit
 // -----------------------------------
 form.addEventListener("submit", function (e) {
-  e.preventDefault();  // stop page refresh
+  e.preventDefault();
 
   const username = usernameInput.value;
   const password = passwordInput.value;
@@ -26,16 +28,14 @@ form.addEventListener("submit", function (e) {
   alert("Logged in as " + username);
 
   if (checkbox.checked) {
-    // Save credentials
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
   } else {
-    // Remove stored credentials
     localStorage.removeItem("username");
     localStorage.removeItem("password");
   }
 
-  // Show/hide "existing user" button
+  // Update visibility
   const su = localStorage.getItem("username");
   const sp = localStorage.getItem("password");
 
