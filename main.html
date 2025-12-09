@@ -1,31 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="styles.css">
-</head>
+<h1>Login Form</h1>
 
-<body>
+<form id="form">
+  <input type="text" id="username" placeholder="Username" />
 
-  <h1>Login Form</h1>
+  <input type="password" id="password" placeholder="Password" />
 
-  <form id="form">
-    <input type="text" id="username" placeholder="Username" />
+  <div>
+    <input type="checkbox" id="checkbox" />
+    <label for="checkbox">Remember me.</label>
+  </div>
 
-    <input type="password" id="password" placeholder="Password" />
+  <input type="submit" id="submit" value="Submit" />
 
-    <div>
-      <input type="checkbox" id="checkbox" />
-      <label for="checkbox">Remember me.</label>
-    </div>
-
-    <input type="submit" id="submit" value="Submit" />
-
-    <button id="existing" type="button" style="display:none;">
-      Login as existing user
-    </button>
-  </form>
-
-  <script type="text/javascript" src="./script.js"></script>
-
-</body>
-</html>
+  <button id="existing" type="button" style="display:none;">
+    Login as existing user
+  </button>
+</form>
